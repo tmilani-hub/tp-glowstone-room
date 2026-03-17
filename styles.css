@@ -1,0 +1,166 @@
+:root {
+	--color-on: navajowhite;
+	--color-off: #22190d;
+	--text-on: #22190d;
+	--text-off: navajowhite;
+
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	background-color: #1a1a1a;
+	color: navajowhite;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px 48px;
+	border-bottom: 2px solid navajowhite;
+}
+
+header h1 {
+	margin: 0;
+}
+
+#stats {
+	margin: 0;
+	font-size: 1rem;
+	opacity: 0.8;
+}
+
+main {
+	display: flex;
+	gap: 48px;
+	padding: 48px;
+	align-items: flex-start;
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	min-width: 240px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+input[type="text"] {
+	padding: 8px 12px;
+	font-family: inherit;
+	font-size: 1rem;
+	border: 2px solid navajowhite;
+	border-radius: 4px;
+	background: transparent;
+	color: navajowhite;
+}
+
+input[type="text"]::placeholder {
+	opacity: 0.4;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: royalblue;
+	color: navajowhite;
+	padding: 10px 20px;
+	font-family: inherit;
+	font-size: 0.95rem;
+	border: 2px solid rgb(48, 67, 124);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button.delete-btn {
+	background-color: #8b1a1a;
+	border-color: #5a0f0f;
+}
+
+.error {
+	color: tomato;
+	font-size: 0.85rem;
+	min-height: 1.2em;
+}
+
+#global-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+#lights-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 24px;
+	flex: 1;
+}
+
+.light-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 24px;
+	border-radius: 8px;
+	border: 2px solid currentColor;
+	width: 180px;
+}
+
+.light-card img {
+	width: 80px;
+}
+
+.light-card h3 {
+	margin: 0;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.light-card.light-on {
+	background-color: var(--color-on);
+	color: var(--text-on);
+}
+
+.light-card.light-off {
+	background-color: var(--color-off);
+	color: var(--text-off);
+}
+
+.status-badge {
+	font-size: 0.8rem;
+	padding: 2px 10px;
+	border: 2px solid currentColor;
+	border-radius: 99px;
+}
+
+/*
+	for room
+*/
+
+.room {
+}
+.light {
+	width: 100%;
+}
+.namee {
+}
+.itsONorOFF {
+}
+.turn-ligth {
+}
+.remove {
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Glowstone Light Network</title>
+	</head>
+	<body>
+		<header>
+			<h1>Glowstone Light Network</h1>
+			<p id="stats">0 light(s) ON — 0 light(s) OFF</p>
+		</header>
+		<main>
+			<aside>
+				<form id="add-form" novalidate>
+					<h2>Add a light</h2>
+					<label for="light-name">Name (min. 3 characters)</label>
+					<input type="text" id="light-name" placeholder="e.g. Living Room" />
+					<span id="name-error" class="error"></span>
+					<button type="submit">Add Light</button>
+				</form>
+				<div id="global-controls">
+					<button id="all-on">Turn All ON</button>
+					<button id="all-off">Turn All OFF</button>
+				</div>
+			</aside>
+			<section id="lights-grid">
+				<div class="room">
+					<img class="light" src="assets/glowstone-off.webp" />
+					<p class="namee">test</p>
+					<h5 class="itsONorOFF">OFF</h5>
+					<button type="button" class="turn-ligth"></button>
+					<button type="button" class="remove"></button>
+				</div>
+			</section>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
