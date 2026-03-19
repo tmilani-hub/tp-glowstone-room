@@ -1,3 +1,4 @@
+
 :root {
 	--color-on: navajowhite;
 	--color-off: #22190d;
@@ -124,14 +125,20 @@ button.delete-btn {
 }
 .itsONorOFF {
 	padding: 7px 10px;
-	background-color: #ffffff;
-	border-radius: 12px;
+	border-radius: 2px;
 	border: 2px solid #774015;
-	color: #644100;
+	color: var(--text-off);
 }
 .remove {
 	background-color: red;
 }
 .ligth-on {
 	background-color: var(--color-on);
+}
+.room > p {
+	color: white;
+	border-radius: 50%;
+}
+.room.on > p {
+	color: black;
 }

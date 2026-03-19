@@ -55,8 +55,6 @@ function create_room(text) {
 			isoff = false;
 			off--;
 			on++;
-			$NUM_light_on.textContent = on;
-			$NUM_light_off.textContent = off;
 		} else {
 			img.setAttribute("src", "assets/glowstone-off.webp");
 			h5.textContent = "off";
@@ -65,9 +63,8 @@ function create_room(text) {
 			isoff = true;
 			on--;
 			off++;
-			$NUM_light_on.textContent = on;
-			$NUM_light_off.textContent = off;
 		}
+		updateLightsCounters();
 	});
 	btn_remove.addEventListener("click", () => {
 		room.remove();
@@ -78,7 +75,7 @@ function create_room(text) {
 			on--;
 			$NUM_light_on.textContent = on;
 		}
-		for (let i = 0; i < ta$.length; i++) {
+		for (let i = 0; i < tab.length; i++) {
 			if (tab[i] === text) {
 				tab.remove();
 				break;
@@ -91,10 +88,9 @@ function create_room(text) {
 		room.classList.add("ligth-on");
 		btn_on.textContent = "Turn OFF";
 		isoff = false;
-		on = tab.length;
+		on = on + off;
 		off = 0;
-		$NUM_light_on.textContent = tab.length;
-		$NUM_light_off.textContent = 0;
+		updateLightsCounters();
 	});
 	$all_off.addEventListener("click", () => {
 		img.setAttribute("src", "assets/glowstone-off.webp");
@@ -102,10 +98,13 @@ function create_room(text) {
 		room.classList.remove("ligth-on");
 		btn_on.textContent = "Turn ON";
 		isoff = true;
+		off = off + on;
 		on = 0;
-		off = tab.length;
-		$NUM_light_on.textContent = 0;
-		$NUM_light_off.textContent = tab.length;
+		updateLightsCounters();
 	});
 	return room;
+}
+function updateLightsCounters() {
+	$NUM_light_on.textContent = on;
+	$NUM_light_off.textContent = off;
 }
